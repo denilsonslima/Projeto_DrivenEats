@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2? family= Justo & display=swap');
-@import url('https://fonts.googleapis.com/css2? family= Roboto:wght@300;400;700 & display=swap');
+/* fontes
+font-family: 'Righteous', cursive;
+font-family: 'Roboto', sans-serif;
+*/
 
 * {
     box-sizing: border-box;
@@ -9,218 +11,133 @@ body {
     background: #E5E5E5;
 }
 
-.pai {
-    width: 414px;
-    height: 1026px;
-    margin: auto;
+.topo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: #EEEEEE;
+    width: 414px;
+    height: 92px;
+    margin: auto;
+    background-color: #CF2B2B;
+}
 
+.topo div {
+    height: 100%;
+    margin-left: 21px;
+    color: #FFFFFF;
+}
+
+.topo h1 {
+    display: flex;
+    align-items: flex-end;
+    width: 248px;
+    height: 44px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+
+    font-family: 'Righteous', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 55px;
+}
+
+.topo p {
+    display: flex;
+    align-items: flex-end;
+    width: 248px;
+    height: 17px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 414px;
+    height: 842px;
+    margin: auto;
+    background-color: #EEEEEE;
+}
+
+
+.bloco-1 {
+    width: 100%;
+    height: 216px;
+    margin-left: 19px;
+    overflow: scroll;
 
     position: relative;
 }
 
-.topo {
-    width: 100%;
-    height: 92px;
-    margin-bottom: 92px;
-    background-color: #CF2B2B;
+.menu-1 {
+    width: 774px;
+    height: 217px;
+    display: flex;
 
     position: absolute;
     top: 0px;
     left: 0px;
 }
 
-.texto-topo {
-    width: 248px;
-    height: 66px;
-    margin: 8px 0px 18px 21px;
-
+.pratos {
+    width: 172px;
+    height: 100%;
+    margin-right: 16px;
+    background: #FFFFFF;
+    border-radius: 9px;
 }
 
-.texto-topo h1 {
-    width: 100%;
-    height: 44px;
-    margin-bottom: 5px;
-
-    font-family: 'Righteous';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 44px;
-    line-height: 55px;
-    color: #FFFFFF;
-
+.pratos-interno {
+    width: 144px;
+    height: 185px;
+    background-color: crimson;
 }
 
-.texto-topo p {
+.bloco-2 {
     width: 100%;
-    height: 17px;
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-
-    color: #FFFFFF;
-
+    height: 202px;
+    margin-left: 19px;
+    background-color: orange;
 }
 
-.meio {
+.bloco-3 {
     width: 100%;
-    height: 842px;
-    margin: auto;
-    overflow: scroll;
-}
-
-.caixa-a {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 258px;
-    margin-top: 31px;
-    margin-bottom: 27px;
-}
-
-.caixa-b {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 244px;
-    margin-bottom: 27px;
-}
-
-.caixa-c {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 239px;
-    margin-bottom: 27px;
+    height: 197px;
+    margin-left: 19px;
+    background-color: orangered;
 }
 
 .titulo {
-    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     height: 25px;
     margin-left: 19px;
-}
 
-.titulo h2 {
-    font-family: 'Righteous';
+    font-family: 'Righteous', cursive;
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
     line-height: 32px;
-    letter-spacing: 0.018em;
-
     color: #333333;
 }
 
-.caixas {
-    display: flex;
+#titulo-1 {
+    margin-top: 31px;
+    margin-bottom: 17px;
 }
 
-.caixinha-1 {
-    width: 172px;
-    height: 216px;
-    margin-left: 19px;
-    border-radius: 9px;
-    background: #FFFFFF;
+#titulo-2 {
+    margin-top: 27px;
+    margin-bottom: 17px;
 }
 
-.caixinha-4 {
-    width: 172px;
-    height: 202px;
-    margin-left: 19px;
-    border-radius: 9px;
-    background: #FFFFFF;
-}
-
-.caixinha-3 {
-    width: 172px;
-    height: 197px;
-    margin-left: 19px;
-    border-radius: 9px;
-    background: #FFFFFF;
-}
-
-.caixinha-2 {
-    width: 144px;
-    height: 185px;
-    margin: 18px 14px 13px 14px;
-}
-
-.caixinha-2 img {
-    width: 100%;
-    margin-bottom: 8px;
-}
-
-.caixinha-2 h2 {
-    height: 23px;
-    margin-bottom: 4px;
-
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-
-    color: #333333;
-}
-
-.caixinha-2 p { 
-    height: 39px;
-    margin-bottom: 5px;
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 18px;
-
-    color: #A6A6A6;
-}
-
-.caixinha-2 h1 {
-    height: 19px;
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-
-
-    color: #000000;
-}
-
-.fim {
-    width: 100%;
-    height: 92px;
-    background-color: #CF2B2B;
-
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-
-}
-
-.botao {
-    width: 364px;
-    height: 61px;
-    left: 25px;
-    bottom: 16px;
-
-    background: #CBCBCB;
-    border-radius: 50px;
-    margin: 15px 25px 16px 25px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#titulo-3 {
+    margin-top: 27px;
+    margin-bottom: 17px;
 }
