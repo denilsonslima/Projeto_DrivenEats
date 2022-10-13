@@ -275,6 +275,7 @@ body {
 
 .container {
     padding-left: 5%;
+    background-color: green;
 }
 
 .main .container:nth-child(3){
