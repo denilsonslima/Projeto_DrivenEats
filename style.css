@@ -19,7 +19,7 @@ body {
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 1000;
+    z-index: 2;
 }
 
 .topo h1 {
@@ -85,8 +85,7 @@ body {
 .pratos img {
     width: 144px;
     height: 87px;
-    object-fit: contain;
-    border-radius: 4px;
+    border-radius: 9px;
     margin-bottom: 8px;
 }
 
@@ -136,7 +135,7 @@ body {
     position: fixed;
     bottom: 0px;
     left: 0px;
-    z-index: 1000;
+    z-index: 2;
 }
 
 .ativar {
@@ -148,7 +147,7 @@ body {
     border-radius: 50px;
 }
 
-.roda-pe button p {
+.roda-pe button {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -158,6 +157,49 @@ body {
     color: #FFFFFF;
 }
 
+
+.finalizado {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.final {
+    display: block;
+    
+}
+
+/* .pou-pop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.pou-pop::-webkit-scrollbar {
+    display: none;
+}
+
+.confirmação {
+    width: 377px;
+    height: 353px;
+    background-color: #50D074;
+    border-radius: 9px;
+}
+
+.confirmação::-webkit-scrollbar {
+    display: none;
+} */
 /* JAVASCRIPT */
 
 .borda1, .borda2, .borda3 {
