@@ -1,4 +1,4 @@
-let comida, preco, valor1, valor2, valor3, final1, final2, final3, a, b, c;
+let comida, bebida, sobremesa, final1, final2, final3, a, b, c, soma;
 function seção_1 (seletor){
     const bordaSelect = document.querySelector(".borda1");
     if (bordaSelect !== null){
@@ -12,15 +12,22 @@ function seção_1 (seletor){
     if (apagar !== null){
         apagar.classList.remove("aparecer")
         bordaSelect.classList.remove("borda1")
-    }
+    }  
+    
+    const c = document.querySelector(".borda1 h1")
+    comida = c.innerHTML;
+    console.log(comida)
+    const valor = document.querySelector(".borda1 h2")
+    final1 = valor.innerHTML;
+    final1 = final1.replace("R$ ", "")
+    final1 = final1.replace(",", ".")
+    console.log(final1)
 
     a = document.querySelectorAll(".borda1").length
-    console.log(a)
 
     ativarBotao ()
 }
 
-let bebida, valorBebida;
 function seção_2 (seletor){
     const bordaSelect = document.querySelector(".borda2");
     if (bordaSelect !== null){
@@ -36,13 +43,21 @@ function seção_2 (seletor){
         bordaSelect.classList.remove("borda2")
     }
 
+    const c4 = document.querySelector(".borda2 h1")
+    bebida = c4.innerHTML;
+    console.log(bebida)
+    const valor1 = document.querySelector(".borda2 h2")
+    final2 = valor1.innerHTML;
+    final2 = final2.replace("R$ ", "")
+    final2 = final2.replace(",", ".")
+    console.log(final2)
+   
+
     b = document.querySelectorAll(".borda2").length
-    console.log(b)
 
     ativarBotao ()
 }
 
-let sobremesa, valorSobremesa;
 function seção_3 (seletor){
     const bordaSelect = document.querySelector(".borda3");
     if (bordaSelect !== null){
@@ -58,18 +73,24 @@ function seção_3 (seletor){
         bordaSelect.classList.remove("borda3")
     }
 
-    class
-
+    const c5 = document.querySelector(".borda3 h1")
+    sobremesa = c5.innerHTML;
+    console.log(sobremesa)
+    const valor8 = document.querySelector(".borda3 h2")
+    final3 = valor8.innerHTML;
+    final3 = final3.replace("R$ ", "")
+    final3 = final3.replace(",", ".")
+    console.log(final3)
 
     c = document.querySelectorAll(".borda3").length
-    console.log(c)
 
     ativarBotao ()
 }
 
+let texto;
 function ativarBotao (){
     const botao = document.querySelector(".roda-pe>button");
-    const texto = document.querySelector(".ativar")
+    texto = document.querySelector(".ativar")
     if (a === 1 && b === 1 && c === 1){
         botao.classList.add("ativadorBotao")  
         const p = document.querySelector(".p1")
@@ -87,10 +108,12 @@ function ativarBotao (){
 }
 
 function enviar (){
-    const soma = final1 + final2 + final3;
-
+    x = Number(final1)
+    y = Number(final2)
+    z = Number(final3)
+    soma = x + y + z;
     let mensagem = encodeURIComponent(`
-    Olá, gostaria de fazer o *pedido*:\n*- Prato*: ${comida}\n*- Bebida*: ${bebida}\n*- Sobremesa*: ${sobremesa}\n*Total*: R$ ${soma}\n
+    Olá, gostaria de fazer o *pedido*:\n*- Prato*: ${comida}\n*- Bebida*: ${bebida}\n*- Sobremesa*: ${sobremesa}\n*Total*: R$ ${soma + ",00"}\n
     `)
 
     if (texto !== undefined){
