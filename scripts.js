@@ -11,7 +11,6 @@ function seção_1 (seletor){
     aparecer.classList.add("aparecer")
     if (apagar !== null){
         apagar.classList.remove("aparecer")
-        bordaSelect.classList.remove("borda1")
     }  
     
     const c = document.querySelector(".borda1 h1")
@@ -23,9 +22,7 @@ function seção_1 (seletor){
     final1 = final1.replace(",", ".")
     console.log(final1)
 
-    a = document.querySelectorAll(".borda1").length
-
-    ativarBotao ()
+    att()
 }
 
 function seção_2 (seletor){
@@ -40,7 +37,6 @@ function seção_2 (seletor){
     aparecer.classList.add("aparecer")
     if (apagar !== null){
         apagar.classList.remove("aparecer")
-        bordaSelect.classList.remove("borda2")
     }
 
     const c4 = document.querySelector(".borda2 h1")
@@ -51,11 +47,7 @@ function seção_2 (seletor){
     final2 = final2.replace("R$ ", "")
     final2 = final2.replace(",", ".")
     console.log(final2)
-   
-
-    b = document.querySelectorAll(".borda2").length
-
-    ativarBotao ()
+    att()
 }
 
 function seção_3 (seletor){
@@ -70,7 +62,6 @@ function seção_3 (seletor){
     aparecer.classList.add("aparecer")
     if (apagar !== null){
         apagar.classList.remove("aparecer")
-        bordaSelect.classList.remove("borda3")
     }
 
     const c5 = document.querySelector(".borda3 h1")
@@ -81,11 +72,19 @@ function seção_3 (seletor){
     final3 = final3.replace("R$ ", "")
     final3 = final3.replace(",", ".")
     console.log(final3)
-
-    c = document.querySelectorAll(".borda3").length
-
-    ativarBotao ()
+    att()
 }
+
+function att (){
+    a = document.querySelectorAll(".borda1").length
+    b = document.querySelectorAll(".borda2").length
+    console.log(b)
+    c = document.querySelectorAll(".borda3").length
+    if (a === 1 && b === 1 && c === 1){
+        ativarBotao ()
+    }
+}
+
 
 let texto;
 function ativarBotao (){
