@@ -1,4 +1,4 @@
-let comida, preco, valor1, valor2, valor3, final1, final2, final3;
+let comida, preco, valor1, valor2, valor3, final1, final2, final3, a, b, c;
 function seção_1 (seletor){
     const bordaSelect = document.querySelector(".borda1");
     if (bordaSelect !== null){
@@ -11,20 +11,11 @@ function seção_1 (seletor){
     aparecer.classList.add("aparecer")
     if (apagar !== null){
         apagar.classList.remove("aparecer")
-        seletor.classList.remove("borda1")
+        bordaSelect.classList.remove("borda1")
     }
-    
 
-    // console.log(bordaSelect)
-
-
-    const prato = document.querySelector(".borda1>h1")
-    comida = prato.innerHTML;
-    const prato2 = document.querySelector(".borda1>div>h2")
-    preco = prato2.innerHTML;
-    const res = preco.replace("R$ ", "")
-    valor1 = res.replace(",", ".")
-    final1 = Number(valor1)
+    a = document.querySelectorAll(".borda1").length
+    console.log(a)
 
     ativarBotao ()
 }
@@ -36,14 +27,6 @@ function seção_2 (seletor){
         bordaSelect.classList.remove("borda2")
     }
     seletor.classList.add("borda2")
-    const prato = document.querySelector(".borda2>h1")
-    bebida = prato.innerHTML;
-    const prato2 = document.querySelector(".borda2>div>h2")
-    valorBebida = prato2.innerHTML;
-    const res = valorBebida.replace("R$ ", "")
-    valor2 = res.replace(",", ".")
-    final2 = Number(valor2)
-
 
     const apagar = document.querySelector(".bebida .aparecer");
     const aparecer = document.querySelector(".borda2 .escondido");
@@ -52,6 +35,9 @@ function seção_2 (seletor){
         apagar.classList.remove("aparecer")
         bordaSelect.classList.remove("borda2")
     }
+
+    b = document.querySelectorAll(".borda2").length
+    console.log(b)
 
     ativarBotao ()
 }
@@ -62,15 +48,7 @@ function seção_3 (seletor){
     if (bordaSelect !== null){
         bordaSelect.classList.remove("borda3")
     }
-    console.log(bordaSelect)
-    seletor.classList.add("borda3")
-    const prato = document.querySelector(".borda3>h1")
-    sobremesa = prato.innerHTML;
-    const prato2 = document.querySelector(".borda3>div>h2")
-    valorSobremesa = prato2.innerHTML;
-    const res = valorSobremesa.replace("R$ ", "")
-    valor3 = res.replace(",", ".")
-    final3 = Number(valor3)
+    seletor.classList.add("borda3")   
 
     const apagar = document.querySelector(".sobremesa .aparecer");
     const aparecer = document.querySelector(".borda3 .escondido");
@@ -79,20 +57,32 @@ function seção_3 (seletor){
         apagar.classList.remove("aparecer")
         bordaSelect.classList.remove("borda3")
     }
+
+    class
+
+
+    c = document.querySelectorAll(".borda3").length
+    console.log(c)
+
     ativarBotao ()
 }
 
-let botao, texto;
 function ativarBotao (){
-    if (comida !== undefined && bebida !== undefined && sobremesa !== undefined){
-        botao = document.querySelector(".roda-pe>button");
-        botao.classList.add("ativadorBotao")
-        
-        texto = document.querySelector(".ativar")
-        texto.innerHTML = "Fechar pedido"
-
+    const botao = document.querySelector(".roda-pe>button");
+    const texto = document.querySelector(".ativar")
+    if (a === 1 && b === 1 && c === 1){
+        botao.classList.add("ativadorBotao")  
+        const p = document.querySelector(".p1")
+        p.classList.add("esconder")
+        const b = document.querySelector(".p2")
+        b.classList.remove("esconder")
     } else {
-        botao.classList.remove("ativadorBotao")
+        const botao1 = document.querySelector(".roda-pe>button")
+        botao1.classList.remove("ativadorBotao")
+        const p = document.querySelector(".p1")
+        p.classList.remove("esconder")
+        const b = document.querySelector(".p2")
+        b.classList.add("esconder")
     }
 }
 

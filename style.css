@@ -159,6 +159,10 @@ body {
     color: #FFFFFF;
 }
 
+.esconder {
+    display: none;
+}
+
 /* .pou-pop {
     display: flex;
     justify-content: center;
